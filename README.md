@@ -32,7 +32,7 @@ Linux Integration (SCHOOLBOX): SSSD/Active Directory domain-joined Raspberry Pi 
 ## ⚙️ Phase 1: Active Directory Central Store Setup
 To manage third-party browsers natively from standard Group Policy Management Tools, a pristine Central Store was constructed on the Domain Controller's Sysvol share:
 
-Plaintext
+```text
 \\homelab.lan\sysvol\homelab.lan\Policies\PolicyDefinitions\
 ├── chrome.admx
 ├── msedge.admx
@@ -41,6 +41,8 @@ Plaintext
     ├── chrome.adml
     ├── msedge.adml
     └── firefox.adml
+```
+
 ## 🔒 Phase 2: Windows 11 Policy Architecture (Chrome & Edge)
 A user-scoped GPO titled Kids Windows 11 Browser Safety was created and linked directly to the Kids OU folder.
 
